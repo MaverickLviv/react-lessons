@@ -1,0 +1,8 @@
+.wrapper {
+    display: flex;
+}
+
+.users, .user-posts {
+    width: 50%;
+    padding: 30px;
+}
