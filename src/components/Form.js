@@ -1,25 +1,25 @@
-import {useState} from "react";
+import {createRef, useState} from "react";
+import {saveUser} from "../service/user.api.service";
 
 export default function Form() {
 
-    let [username, setUsername] = useState ('enter username');
-    let [email, setEmail] = useState('enter email');
-
     let onFormSubmit = (e) => {
         e.preventDefault();
+        console.log('form submit')
         console.log(e.target.username.value);
+        console.log(e.target.email.value);
+        let userToSave = {username: e.target.username.value, email: e.target.email.value}
 
+        saveUser(userToSave);
     };
     return (
       <div>
 
-          <form>
-                  <input type="text" name={'username'}/>
-                   <input type="email" name={'email'}/>
+          <form onSubmit ={onFormSubmit}>
+                  <input type="text" name={'username'} placeholder='username'/>
+                   <input type="email" name={'email'} placeholder='email'/>
                  <button>save</button>
-
             </form>
-
     </div>
 
   );
