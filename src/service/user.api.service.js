@@ -1,3 +1,4 @@
+
 const saveUser = (user) => {
     fetch('https://jsonplaceholder.typicode.com/users', {
         method: 'POST',
@@ -5,8 +6,8 @@ const saveUser = (user) => {
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
-    }) Promise <Response>
-        .then((response: Response) => response.json()) Promise <any>
+    }) /*Promise <Response>*/
+        .then((response: Response) => response.json()) /*Promise <any>*/
         .then((json) => console.log(json));
 }
 
