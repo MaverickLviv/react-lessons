@@ -1,9 +1,9 @@
-import {createRef, useState} from "react";
+import {useState} from "react";
 import {saveCar} from "../service/car.api.service";
 
 export default function Form(car) {
 
-    let [formState, setFormState] =useState({model:'', price'', year''});
+    let [formState, setFormState] =useState({model:'', price:'', year:''});
 
     let [onFormSubmit] = (e) => {
         e.setFormState({...formState, [e.target.name]: e.target.value})
