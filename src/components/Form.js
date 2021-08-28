@@ -1,24 +1,27 @@
 import {createRef, useState} from "react";
-import {saveUser} from "../service/user.api.service";
+import {saveCar} from "../service/car.api.service";
 
-export default function Form() {
+export default function Form(car) {
 
-    let onFormSubmit = (e) => {
-        e.preventDefault();
-        console.log('form submit')
-        console.log(e.target.username.value);
-        console.log(e.target.email.value);
-        let userToSave = {username: e.target.username.value, email: e.target.email.value}
+    let [formState, setFormState] =useState({model:'', price'', year''});
 
-        saveUser(userToSave);
+    let [onFormSubmit] = (e) => {
+        e.setFormState({...formState, [e.target.name]: e.target.value})
     };
-    return (
+    let save = (e) => {
+        e.preventDefault();
+        console.log(formState);
+        saveCar(formState);
+    }
+
+        return (
       <div>
 
-          <form onSubmit ={onFormSubmit}>
-                  <input type="text" name={'username'} placeholder='username'/>
-                   <input type="email" name={'email'} placeholder='email'/>
-                 <button>save</button>
+          <form onSubmit ={save}>
+                  <input type="model" name={'model'} value={formState.model} onChange={onFormChange}/>
+                  <input type="price" name={'price'} value={formState.price} onChange={onFormChange}/>
+                  <input type="year" name={'year'} value={formState.year} onChange={onFormChange}/>
+                 <input type="submit"/>
             </form>
     </div>
 
