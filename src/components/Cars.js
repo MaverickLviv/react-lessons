@@ -1,16 +1,16 @@
 import {useEffect, useState} from "react";
-import {getCars} from "../service/car.api.service";
+import {getCars} from "../services/Car.api.services";
 import Car from "./Car";
 
 export default function Cars() {
     let [cars, setCars] = useState([]);
-    useEffct(() => {
-        getCars().then(value => {setCars([...value])})
+    useEffect(() => {
+        getCars().then(value => {setCars([...value])});
     }, [cars]);
-    return(
+    return (
         <div>
             {
-            cars.map(value => <Car item ={value} key={value.id}/>)
+                cars.map(value => <Car item ={value} key={value.id}/>)
             }
         </div>
     )}

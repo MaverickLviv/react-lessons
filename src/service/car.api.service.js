@@ -1,6 +1,5 @@
-
-const saveCar = (Car) => {
-    fetch('http://91.201.233.14/api/v1/cars', {
+const saveCar = (car) => {
+    return  fetch('http://91.201.233.14/api/v1/cars', {
         method: 'POST',
         body: JSON.stringify(car),
         headers: {
@@ -11,9 +10,9 @@ const saveCar = (Car) => {
         .then((json) => console.log(json));
 }
 
-    let getCars = () => {
-    return fetch('http://91.201.233.14/api/v1/cars')
+let getCars = () => {
+    return  fetch('http://91.201.233.14/api/v1/cars')
         .then((response) => response.json())
-    }
+}
 
-export {saveCar, getCars};
+export {saveCar, getCars}
