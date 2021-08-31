@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {saveCar} from "../service/car.api.service"
+import Cars from "./Cars";
 
 export default function Form(car) {
     let [formState, setFormState]= useState({model:'', price:'', year:''});
@@ -19,6 +20,7 @@ export default function Form(car) {
                 <input type="year" name={'year'} value={formState.year} onChange={onFormChange}/>
                 <input type="submit"/>
             </form>
+            <Cars/>
         </div>
     );
 }
