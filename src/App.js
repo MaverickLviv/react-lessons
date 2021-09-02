@@ -1,13 +1,39 @@
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
 
-import './App.css';
 
-function App() {
-  return (
-    <div className={''}>
+} from "react-router-dom";
+import Users from "./compomemts/Users";
+import Posts from "./compomemts/Posts";
+import Comments from "./compomemts/Comments";
 
-    </div>
-  );
-}
 
 export default App;
+
+function App() {
+    return (
+        <Router>
+            <div>
+
+                <Link to={'/'}>default</Link>
+                <br/>
+                <Link to={'/Users'}>Users</Link>
+                <br/>
+                <Link to={'/Posts'}>Posts</Link>
+                <br/>
+                <Link to={'/Comments'}>Comments</Link>
+
+
+                <Route path={'/Users'} component={Users}/>
+                <Route path={'/Posts'} component={Posts}/>
+                <Route path={'/Comments'} component={Comments}/>
+
+            </div>
+
+        </Router>
+
+    );
+}
 
