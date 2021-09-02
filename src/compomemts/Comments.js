@@ -1,11 +1,21 @@
-export default function Comments(props) {
-    console.log(props)
-    return (
-        <div>
-            <h4>contacts</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto deserunt dolores, doloribus
-                illum impedit incidunt iste nam neque optio, quasi quidem repellendus voluptas. Architecto consequatur
-                eum ex illum temporibus.</p>
-        </div>
-    );
-}
+// import {useEffect, useState} from "react";
+// import {getComments} from "../services/comments.services.js";
+// import {withRouter} from "react-router-dom";
+//
+// export default function Posts() {
+//     let [comments, setComments] = useState([]);
+//
+//     useEffect(()=> {
+//         getComments().then(value => setComments([...value]))
+//     }, []);
+//
+//     return (
+//         <div>
+//             {
+//                 comments.map(value => <Comments item={value} key={value.id}/>)
+//
+//             }
+//
+//         </div>
+//     );
+// }

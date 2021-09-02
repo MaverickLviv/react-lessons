@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getUsers} from "../services/users.services";
+import {getUsers} from "../services/users.services.js";
 import {withRouter} from "react-router-dom";
 
 export default function Users() {
@@ -19,5 +19,5 @@ export default function Users() {
     </div>
   );
 }
-export default {getUsers};
+
 
