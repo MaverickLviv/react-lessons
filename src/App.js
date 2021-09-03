@@ -5,9 +5,9 @@ import {
 
 
 } from "react-router-dom";
-import Users from "./compomemts/Users";
-import Posts from "./compomemts/Posts";
-import Comments from "./compomemts/Comments";
+import Users from "./compomemts/users/Users";
+import Posts from "./compomemts/posts/Posts";
+import Comments from "./compomemts/comments/Comments";
 
 
 export default App;

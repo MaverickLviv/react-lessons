@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
-import {getPosts} from "../services/posts.services.js";
-import {withRouter} from "react-router-dom";
+import {getPosts} from "../post/Post";
 
 export default function Posts() {
     let [posts, setPosts] = useState([]);

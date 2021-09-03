@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import {getUsers} from "../services/users.services.js";
-import {withRouter} from "react-router-dom";
+import {getUsers} from "../../services/users.services";
+import {getUsers} from "../user/User"
 
 export default function Users() {
     let [users, setUsers] = useState([]);
@@ -12,7 +12,7 @@ export default function Users() {
   return (
     <div>
         {
-            users.map(value => <Users item={value} key={value.id}/>)
+            users.map(value => <User item={value} key={value.id}/>)
 
                 }
 
