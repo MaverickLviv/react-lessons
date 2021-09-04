@@ -1,8 +1,7 @@
 export default function Posts({item}) {
-    consol.log(Posts)
     return (
         <div>
-            {item.name}
+            {item.title}
 
         </div>
     );
