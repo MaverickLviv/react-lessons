@@ -1,7 +1,7 @@
-export default function Users({Users}) {
+export default function Users({item}) {
   return (
     <div>
-        {Users.name}
+        {item.name}
 
     </div>
   );

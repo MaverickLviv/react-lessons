@@ -1,7 +1,7 @@
-export default function Comments({Comments}) {
+export default function Comments({item}) {
   return (
     <div>
-        {Comment.name}
+        {item.name}
 
     </div>
   );
